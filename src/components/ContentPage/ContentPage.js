@@ -10,7 +10,7 @@
 import React, { Component, PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './ContentPage.scss';
-import ButtonConvert from '../ButtonConvert';
+import ConvertCalendarToJson from '../ConvertCalendarToJson';
 
 
 class ContentPage extends Component {
@@ -32,8 +32,8 @@ class ContentPage extends Component {
         <div className={s.container}>
           {this.props.path === '/' ? null : <h1>{this.props.title}</h1>}
           <div dangerouslySetInnerHTML={{ __html: this.props.content || '' }} />
+          <ConvertCalendarToJson />
         </div>
-        <ButtonConvert />
       </div>
     );
   }
